@@ -1,1 +1,8 @@
 ORice sa nu fie gol
+
+
+
+git clone
+git add -A
+git commit -m "mesaj"
+git push
