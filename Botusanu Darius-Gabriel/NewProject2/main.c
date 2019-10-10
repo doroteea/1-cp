@@ -10,17 +10,15 @@ int main()
     if(x<-2)
         {
             t=x*x-7*x+4;
-            printf("f(x)= %f \n", t);
         }
     if(x==-2)
         {
             t=0;
-            printf("f(x)= %f \n", t);
         }
     if(x>-2)
         {
             t=x*x+5*x-2;
-            printf("f(x)= %f \n", t);
         }
+    printf("f(x)= %f \n", t);
     return 0;
 }
