@@ -5,6 +5,6 @@ int main()
 {
     float x, y;
     scanf("%f%f", &x, &y);
-    printf("%f", pow(x, y));
+    printf("%f", pow(x,y));
     return 0;
 }
