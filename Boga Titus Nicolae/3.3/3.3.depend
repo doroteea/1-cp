@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1571216051 source:d:\work\cursuri\computer programming\1-cp\boga titus nicolae\3.3\main.c
+1571216598 source:d:\work\cursuri\computer programming\1-cp\boga titus nicolae\3.3\main.c
 	<stdio.h>
 	<stdlib.h>
 	<limits.h>
+	<float.h>
 
