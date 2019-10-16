@@ -13,7 +13,7 @@ int nrprim(int x)
 }
 int main()
 {
-    int n,i,diviz;
+    int n,i;
     scanf("%d",&n);
     printf("numerele urmatoare sunt prime= ");
     for(i=1; i<=n; i++)
