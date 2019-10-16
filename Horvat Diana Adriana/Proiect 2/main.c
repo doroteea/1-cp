@@ -7,15 +7,15 @@ int main()
     scanf("%f",&x);
     if(x<-2)
     {
-        printf("%f",x*x-7*x+4);
+        printf("x=%f",x*x-7*x+4);
     }
     if(x==-2)
     {
-        printf("%f",0);
+        printf("x=%f",0);
     }
     if(x>-2)
     {
-        printf("%f",x*x+5*x-2);
+        printf("x=%f",x*x+5*x-2);
     }
     return 0;
 }
