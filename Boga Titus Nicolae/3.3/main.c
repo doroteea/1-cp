@@ -24,6 +24,6 @@ int main()
         }
 
     }
-    printf("Cel mai mare este %f cu indicele %d iar cel mai mic este %f cu indicele %d",Maxim,IndexMax,Minim,IndexMin);
+    printf("Cel mai mare este %.2f cu indicele %d iar cel mai mic este %f cu indicele %d",Maxim,IndexMax,Minim,IndexMin);
     return 0;
 }
