@@ -1,0 +1,6 @@
+static int[][] board = new int[BSIZE_HEIGHT * 3][BSIZE_WIDTH * 3];
+
+public static int BSIZE_HEIGHT = (int) screen_height / HEXSIZE - 2;
+public static int BSIZE_WIDTH = (int) ((int) screen_width / (0.85 * HEXSIZE));
+
+in fine, BSIZE_HEIGHT = aprox 22, BSIZE_WIDTH= aprox 52

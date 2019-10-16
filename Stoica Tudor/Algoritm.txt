@@ -1,0 +1,207 @@
+package Root_Package;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import static javax.swing.JOptionPane.showMessageDialog;
+import javax.swing.Timer;
+
+public class Game implements ActionListener {
+
+    Timer t = new Timer(10, this);
+
+    public Game() {
+        start();
+        fr[7][5] = true;
+        detect_enemy_n_hex_around(7, 5, 2, 2);
+
+        for (int i = 1; i <= 2; i++) {
+            System.out.print("\n" + "\n" + "layer " + i + "\n");
+            for (int j = 1; j <= b[i][0][0]; j++) {
+                System.out.print(b[i][j][0] + " " + b[i][j][1] + "\n");
+            }
+        }
+    }
+
+    private void start() {
+        t.start();
+        deploy_troops();
+    }
+
+    private void deploy_troops() {
+        // showMessageDialog(null, "Deploy your troops");
+        Root_Package.Toolbar_Game.Alert_Text_Field.setText("Deploy your troops!");
+    }
+
+    /**
+     * ******************************************************************
+     * [32][][]-layer 32 [12][21][]-21th neighbourgh on layer 12 
+     * [][][0] -> x
+     * [][][1] -> y 
+     * b[5][0][0] -> nr of neighbours on layer 5
+     * *******************************************************************
+     */
+    int[][][] b = new int[50][100][5];
+    boolean[][] fr = new boolean[50][50];
+
+    /**
+     * ******************************************************************
+     * x si y trebuie sa fie valide, de aceea e if la fiecare parametrul neib
+     * neib = n cand apelezi functia
+     * *******************************************************************
+     */
+
+    public void detect_enemy_n_hex_around(int x, int y, int n, int neib) {
+        try {
+            if (neib > 0) {
+                if (!(x - 1 < 0 || y < 0 || x - 1 >= hexgame.BSIZE_WIDTH || y >= hexgame.BSIZE_HEIGHT) && fr[x - 1][y] == false) {
+
+                    if (hexgame.board[x - 1][y] >= 100) { /// daca pe celula respectiva se afla un inamic
+
+                        b[n - neib + 1][0][0]++;
+                        b[n - neib + 1][b[n - neib + 1][0][0]][0] = x - 1;
+                        b[n - neib + 1][b[n - neib + 1][0][0]][1] = y;
+                        fr[x - 1][y] = true;
+                    }
+                    detect_enemy_n_hex_around(x - 1, y, n, neib - 1); /// x-1,y
+                }
+
+                if (!(x < 0 || y - 1 < 0 || x >= hexgame.BSIZE_WIDTH || y - 1 >= hexgame.BSIZE_HEIGHT) && fr[x][y - 1] == false) { 
+
+                    if (hexgame.board[x][y - 1] >= 100) { /// daca pe celula respectiva se afla un inamic
+
+                        b[n - neib + 1][0][0]++;
+                        b[n - neib + 1][b[n - neib + 1][0][0]][0] = x;
+                        b[n - neib + 1][b[n - neib + 1][0][0]][1] = y - 1;
+                        fr[x][y - 1] = true;
+                    }
+                    detect_enemy_n_hex_around(x, y - 1, n, neib - 1); /// x, y-1
+                }
+                if (!(x - 1 < 0 || y + 1 < 0 || x - 1 >= hexgame.BSIZE_WIDTH || y + 1 >= hexgame.BSIZE_HEIGHT) && fr[x - 1][y + 1] == false) { 
+
+                    if (hexgame.board[x - 1][y + 1] >= 100) { /// daca pe celula respectiva se afla un inamic
+                        b[n - neib + 1][0][0]++;
+                        b[n - neib + 1][b[n - neib + 1][0][0]][0] = x - 1;
+                        b[n - neib + 1][b[n - neib + 1][0][0]][1] = y + 1;
+                        fr[x - 1][y + 1] = true;
+                    }
+                    detect_enemy_n_hex_around(x - 1, y + 1, n, neib - 1); /// x-1, y+1
+                }
+                if (!(x + 1 < 0 || y < 0 || x + 1 >= hexgame.BSIZE_WIDTH || y >= hexgame.BSIZE_HEIGHT) && fr[x + 1][y] == false) {
+                  
+                    if (hexgame.board[x + 1][y] >= 100) { /// daca pe celula respectiva se afla un inamic
+
+                        b[n - neib + 1][0][0]++;
+                        b[n - neib + 1][b[n - neib + 1][0][0]][0] = x + 1;
+                        b[n - neib + 1][b[n - neib + 1][0][0]][1] = y;
+                        fr[x + 1][y] = true;
+                    }
+                    detect_enemy_n_hex_around(x + 1, y, n, neib - 1); /// x+1, y
+                }
+                if (!(x + 1 < 0 || y + 1 < 0 || x + 1 >= hexgame.BSIZE_WIDTH || y + 1 >= hexgame.BSIZE_HEIGHT) && fr[x + 1][y + 1] == false) {
+
+                    if (hexgame.board[x + 1][y + 1] >= 100) { /// daca pe celula respectiva se afla un inamic
+
+                        b[n - neib + 1][0][0]++;
+                        b[n - neib + 1][b[n - neib + 1][0][0]][0] = x + 1;
+                        b[n - neib + 1][b[n - neib + 1][0][0]][1] = y + 1;
+                        fr[x + 1][y + 1] = true;
+                    }
+                    detect_enemy_n_hex_around(x + 1, y + 1, n, neib - 1); /// x+1, y+1
+                }
+                if (!(x < 0 || y + 1 < 0 || x >= hexgame.BSIZE_WIDTH || y + 1 >= hexgame.BSIZE_HEIGHT) && fr[x][y + 1] == false) {
+
+                    if (hexgame.board[x][y + 1] >= 100) { /// daca pe celula respectiva se afla un inamic
+
+                        b[n - neib + 1][0][0]++;
+                        b[n - neib + 1][b[n - neib + 1][0][0]][0] = x;
+                        b[n - neib + 1][b[n - neib + 1][0][0]][1] = y + 1;
+                        fr[x][y + 1] = true;
+                    }
+                    detect_enemy_n_hex_around(x, y + 1, n, neib - 1); /// x, y+1
+                }
+            }
+        } catch (Exception e) {
+            System.out.print(e + "\n");
+        }
+    }
+
+    private void detect_enemy_1_hex_around(int x, int y) { /// x si y trebuie sa fie valide
+
+        int[][] a = null; /// [][0] -> x, [][1] -> y, [][2] -> contor
+        int neib = 0;
+
+        if (!(x - 1 < 0 || y - 1 < 0 || x - 1 >= hexgame.BSIZE_WIDTH || y - 1 >= hexgame.BSIZE_HEIGHT)) {
+
+            if (hexgame.board[x - 1][y - 1] >= 100) {
+                // return true;
+                neib++;
+                a[neib][0] = x - 1;
+                a[neib][1] = y - 1;
+            }
+        }
+
+        if (!(x < 0 || y - 1 < 0 || x >= hexgame.BSIZE_WIDTH || y - 1 >= hexgame.BSIZE_HEIGHT)) {
+
+            if (hexgame.board[x][y - 1] >= 100) {
+                // return true;
+                neib++;
+                a[neib][0] = x;
+                a[neib][1] = y - 1;
+            }
+        }
+
+        if (!(x + 1 < 0 || y - 1 < 0 || x + 1 >= hexgame.BSIZE_WIDTH || y - 1 >= hexgame.BSIZE_HEIGHT)) {
+
+            if (hexgame.board[x + 1][y - 1] >= 100) {
+                // return true;
+                neib++;
+                a[neib][0] = x + 1;
+                a[neib][1] = y - 1;
+            }
+        }
+
+        if (!(x + 1 < 0 || y < 0 || x + 1 >= hexgame.BSIZE_WIDTH || y >= hexgame.BSIZE_HEIGHT)) {
+
+            if (hexgame.board[x + 1][y] >= 100) {
+                // return true;
+                neib++;
+                a[neib][0] = x + 1;
+                a[neib][1] = y;
+            }
+        }
+
+        if (!(x - 1 < 0 || y - 1 < 0 || x - 1 >= hexgame.BSIZE_WIDTH || y - 1 >= hexgame.BSIZE_HEIGHT)) {
+
+            if (hexgame.board[x - 1][y - 1] >= 100) {
+                // return true;
+                neib++;
+                a[neib][0] = x - 1;
+                a[neib][1] = y - 1;
+            }
+        }
+
+        if (!(x < 0 || y + 1 < 0 || x >= hexgame.BSIZE_WIDTH || y + 1 >= hexgame.BSIZE_HEIGHT)) {
+
+            if (hexgame.board[x][y + 1] >= 100) {
+                // return true;
+                neib++;
+                a[neib][0] = x;
+                a[neib][1] = y + 1;
+            }
+        }
+
+        for (int i = 1; i < neib; i++) {
+            for (int j = i + 1; j <= neib; j++) {
+                if (a[i][0] == a[j][0] && a[i][1] == a[j][1]) {
+
+                }
+            }
+        }
+        // return false;
+    }
+
+    public void actionPerformed(ActionEvent e) {
+
+    }
+
+}
