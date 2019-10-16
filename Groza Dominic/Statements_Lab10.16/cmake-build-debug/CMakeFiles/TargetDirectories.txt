@@ -1,0 +1,3 @@
+C:/Users/Dominic/Desktop/Stuff/CP/CP Lab/Git/1-cp/Groza Dominic/Statements_Lab10.16/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Dominic/Desktop/Stuff/CP/CP Lab/Git/1-cp/Groza Dominic/Statements_Lab10.16/cmake-build-debug/CMakeFiles/Statements_Lab10_16.dir
+C:/Users/Dominic/Desktop/Stuff/CP/CP Lab/Git/1-cp/Groza Dominic/Statements_Lab10.16/cmake-build-debug/CMakeFiles/rebuild_cache.dir
