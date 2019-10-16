@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
+#include <float.h>
 int main()
 {
+
     int n,IndexMin,IndexMax;
-    float Minim=10000,Maxim=-2389328,NrCitit;
+    float Minim=FLT_MAX,Maxim=FLT_MIN,NrCitit;
     scanf("%d",&n);
     for(int i=1;i<=n;++i)
     {
