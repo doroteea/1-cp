@@ -4,7 +4,7 @@
 
 int IsPrime(int n)
 {
-    if(!n%2)
+    if(!(n%2))
         return 0;
     for(int i=3;i<=sqrt(n);i+=2)
     {
@@ -26,6 +26,6 @@ int main()
         {
             printf("%d",i);
             return 0;
-        }
+        }//3.13 1.12
     return 0;
 }
