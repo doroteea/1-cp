@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 # depslib dependency file v1.0
 1571171432 source:c:\users\zaraa\desktop\cp lab\1-cp\zara antonia-maria\l3\3.3\main.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
 
+=======
+# depslib dependency file v1.0
+1571171432 source:c:\users\zaraa\desktop\cp lab\1-cp\zara antonia-maria\l3\3.3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+>>>>>>> b80f571ba1a2c0ba1c181166b66fe6102ad0c838
