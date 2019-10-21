@@ -7,104 +7,138 @@ c) The string of the elements from the first string, without the elements that a
 #include <stdlib.h>
 #include <string.h>
 
-void read(char s1[200], char s2[200], int n, int m)
-{
-    for(int i = 0; i < n; i++)
-    {
+int n, m;
+
+void read(char *s1, char *s2) {
+
+    for(int i = 0; i < n; i++) {
         scanf("%c", &s1[i]);
     }
+
     s1[n] = '\0';
 
     getchar();
 
-    for(int i = 0; i < m; i++)
-    {
+    for(int i = 0; i < m; i++) {
         scanf("%c", &s2[i]);
     }
+
     s2[m] = '\0';
+
 }
 
-int searchChar(char s[200], char a, int k)
-{
+int searchChar(char s[200], char character, int size) {
+
     int ct = 0;
-    for(int i = 0; i < k; i++)
-    {
-        if(s[i] == a)
-        {
+
+    for(int i = 0; i < size; i++) {
+
+        if(s[i] == character) {
             ct++;
         }
+
     }
+
     return ct;
+
 }
 
-void newStringA(char s1[200], char s2[200], char s3[400], int n, int m, int *l)
-{
-    char v[200];
-    int w, a = 0;
-    for(int i = 0; i < m; i++)
-    {
-        w = 0;
-        if(strchr(s1, s2[i]) != NULL && strchr(v, s2[i]) == NULL)
-        {
-            w = searchChar(s1, s2[i], n) + searchChar(s2, s2[i], m);
-            for(int j = 0; j < w; j++)
-            {
-                s3[*l] = s2[i];
-                (*l)++;
+void newStringA(char s1[], char s2[], char *s3) {
+
+    char V[200]; /// i am using this vector to save the elements belonging to both strings,
+                 /// for ex if i find a character in both string, after this i wont put it anymore if there are more same characters
+    int lengthV, length = 0, temporary;
+
+    for(int i = 0; i < m; i++) {
+
+        if(strchr(s1, s2[i]) != NULL && strchr(V, s2[i]) == NULL) {
+
+            temporary = searchChar(s1, s2[i], n) + searchChar(s2, s2[i], m); /// temporary is the number of elements in both strings
+
+            for(int j = 0; j < temporary; j++) {
+                s3[length] = s2[i];
+                length++;
             }
-            v[a] = s2[i];
-            a++;
+
+            V[lengthV] = s2[i];
+            lengthV++;
+
         }
+
     }
-    s3[*l] = '\0';
+
+    s3[length] = '\0';
+
 }
 
-void newStringB(char s1[200], char s2[200], char s4[200], int *k)
-{
-    for(char a = 1; a < 127; a++)
-    {
-        if(strchr(s1, a) != NULL && strchr(s2, a) != NULL)
-        {
-            s4[*k] = a;
-            (*k)++;
+void newStringB(char s1[], char s2[], char *s3) {
+
+    int length = 0;
+
+    for(char a = 1; a < 127; a++) {
+
+        if(strchr(s1, a) != NULL && strchr(s2, a) != NULL) {
+            s3[length] = a;
+            length++;
         }
+
     }
-    s4[*k] = '\0';
+
+    s3[length] = '\0';
+
 }
 
-void newStringC(char s1[200], char s2[200], char s5[200], int n, int m, int *p)
-{
-    for(int i = 0 ; i < n; i++)
-    {
-        if(strchr(s2, s1[i]) == NULL)
-        {
-            s5[*p] = s1[i];
-            (*p)++;
+void newStringC(char s1[], char s2[], char *s3) {
+
+    int length = 0;
+
+    for(int i = 0 ; i < n; i++) {
+
+        if(strchr(s2, s1[i]) == NULL) {
+            s3[length] = s1[i];
+            length++;
         }
+
     }
-    s5[*p] = '\0';
+
+    s3[length] = '\0';
+
 }
 
-int main()
-{
-    int n, m, k = 0, l = 0, p = 0;
-    char s1[200], s2[200], s3[400], s4[200], s5[200];
+int main() {
+
     printf("Read n and m: ");
     scanf("%d %d", &n, &m);
+    char s1[n], s2[m], s3[n + m];
     getchar();
     printf("Read the strings: ");
-    read(s1, s2, n, m);
+    read(s1, s2);
 
     /// a !!!!!!!!!!!!!!!!!
-    newStringA(s1, s2, s3, n, m, &l);
-    printf("The string that contains all the elements belonging to both strings is: %s\n", s3);
+    newStringA(s1, s2, s3);
+
+    if(s3[0] == '\0') {
+        printf("There are no common elements in the strings\n");
+    } else {
+        printf("The string that contains all the elements belonging to both strings is: %s\n", s3);
+    }
 
     /// b !!!!!!!!!!!!!!!!!
-    newStringB(s1, s2, s4, &k);
-    printf("The string of all the elements of the two given strings, written once is:%s\n", s4);
+    newStringB(s1, s2, s3);
+
+    if(s3[0] == '\0') {
+        printf("There are no common elements in the strings\n");
+    } else {
+        printf("The string of all the elements of the two given strings, written once is:%s\n", s3);
+    }
 
     /// c !!!!!!!!!!!!!!!!!
-    newStringC(s1, s2, s5, n, m, &p);
-    printf("The string of the elements from the first string, without the elements that are also in the second string is:%s\n", s5);
+    newStringC(s1, s2, s3);
+
+    if(s3[0] == '\0') {
+        printf("There are no different elements in the strings\n");
+    } else {
+        printf("The string of the elements from the first string, without the elements that are also in the second string is:%s\n", s3);
+    }
     return 0;
 }
