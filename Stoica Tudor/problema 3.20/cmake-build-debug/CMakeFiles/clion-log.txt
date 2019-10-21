@@ -1,0 +1,17 @@
+"D:\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_C_COMPILER=C:/Program Files (x86)/CodeBlocks/MinGW/bin/mingw32-gcc.exe" "-DCMAKE_CXX_COMPILER=C:/Program Files (x86)/CodeBlocks/MinGW/bin/mingw32-g++.exe" -G "CodeBlocks - MinGW Makefiles" "D:\Info\c facultate\1-cp\Stoica Tudor\problema 3.20"
+-- The C compiler identification is GNU 5.1.0
+-- Check for working C compiler: C:/Program Files (x86)/CodeBlocks/MinGW/bin/mingw32-gcc.exe
+-- Check for working C compiler: C:/Program Files (x86)/CodeBlocks/MinGW/bin/mingw32-gcc.exe -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+
+
+-- Build files have been written to: D:/Info/c facultate/1-cp/Stoica Tudor/problema 3.20/cmake-build-debug
