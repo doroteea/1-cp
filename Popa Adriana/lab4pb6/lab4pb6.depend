@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1571666259 source:c:\users\adriana\desktop\1cp\1-cp\popa adriana\lab4pb6\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1571677181 source:c:\users\adriana\desktop\lab4pb6\main.c
+	<stdio.h>
+	<stdlib.h>
+
