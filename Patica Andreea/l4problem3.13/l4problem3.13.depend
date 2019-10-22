@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1571771237 source:c:\users\alex\desktop\programming lab\1-cp\patica andreea\l4problem3.13\main.c
+	<stdio.h>
+	<stdbool.h>
+
