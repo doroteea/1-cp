@@ -17,5 +17,9 @@ int main()
     {
         printf("Numarul x= %d  apare pe pozitia i= %d",x,i);
     }
+    else
+    {
+        printf("Numarul x= %d nu apare",x);
+    }
     return 0;
 }
