@@ -1,8 +1,13 @@
 #include <stdio.h>
 #include <string.h>
 char prop[300],*token;
+<<<<<<< HEAD:Stoica Tudor/strtok.txt
 const char delim[20]=" .?;: ,!";
 
+=======
+const char delim[20]=" .?;:,!";
+int cnt;
+>>>>>>> 6ef39cce046d8d3810c6bfc1e982af89145e75df:Stoica Tudor/problema 3.20/main.c
 
 int main() {
 
@@ -11,8 +16,10 @@ int main() {
 
     while (token != NULL) {
         printf("%s\n",token);
+        cnt++;
         token = strtok(NULL, delim);
     }
+    printf("%d", cnt);
 /// for Ana are mere it only couts Ana
 /// for any other Ana.are.mere it couts Ana are mere
     return 0;
