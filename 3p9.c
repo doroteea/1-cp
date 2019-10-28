@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void ConvertToRoman (int nr, char *table[4][10])
+void ConvertToRoman (int nr, char **table)
 {
     int power = 0, div = 1;
     while (nr / div > 9)
