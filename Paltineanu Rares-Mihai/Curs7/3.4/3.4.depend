@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1572419712 source:d:\git ex\1-cp\paltineanu rares-mihai\3.4\read.c
+	<stdio.h>
+	<stdlib.h>
+
+1572443113 source:d:\git ex\1-cp\paltineanu rares-mihai\3.4\main.c
+	<stdio.h>
+	<stdlib.h>
+	"merge.h"
+	"read.h"
+	"sort.h"
+	"write.h"
+
+1572419346 d:\git ex\1-cp\paltineanu rares-mihai\3.4\read.h
+
+1572421506 d:\git ex\1-cp\paltineanu rares-mihai\3.4\merge.h
+
+1572441928 source:d:\git ex\1-cp\paltineanu rares-mihai\3.4\merge.c
+	<stdio.h>
+	<stdlib.h>
+
+1572443113 d:\git ex\1-cp\paltineanu rares-mihai\3.4\sort.h
+
+1572443207 source:d:\git ex\1-cp\paltineanu rares-mihai\3.4\sort.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1572442493 d:\git ex\1-cp\paltineanu rares-mihai\3.4\write.h
+
+1572442652 source:d:\git ex\1-cp\paltineanu rares-mihai\3.4\write.c
+	<stdio.h>
+	<stdlib.h>
+
+1572443373 source:d:\git ex\1-cp\paltineanu rares-mihai\curs 7\3.4\main.c
+	<stdio.h>
+	<stdlib.h>
+	"merge.h"
+	"read.h"
+	"sort.h"
+	"write.h"
+
+1572421506 d:\git ex\1-cp\paltineanu rares-mihai\curs 7\3.4\merge.h
+
+1572419346 d:\git ex\1-cp\paltineanu rares-mihai\curs 7\3.4\read.h
+
+1572443113 d:\git ex\1-cp\paltineanu rares-mihai\curs 7\3.4\sort.h
+
+1572442493 d:\git ex\1-cp\paltineanu rares-mihai\curs 7\3.4\write.h
+
+1572441928 source:d:\git ex\1-cp\paltineanu rares-mihai\curs 7\3.4\merge.c
+	<stdio.h>
+	<stdlib.h>
+
+1572419712 source:d:\git ex\1-cp\paltineanu rares-mihai\curs 7\3.4\read.c
+	<stdio.h>
+	<stdlib.h>
+
+1572443207 source:d:\git ex\1-cp\paltineanu rares-mihai\curs 7\3.4\sort.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1572442652 source:d:\git ex\1-cp\paltineanu rares-mihai\curs 7\3.4\write.c
+	<stdio.h>
+	<stdlib.h>
+
