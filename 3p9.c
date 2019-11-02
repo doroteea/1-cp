@@ -1,41 +1,84 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void ConvertToRoman (int nr, char **table)
+int** Multiplication (int **A, int **B, int n)
 {
-    int power = 0, div = 1;
-    while (nr / div > 9)
+    int i, j, s, z;
+    int **C = (int**)malloc(sizeof(int*) * n);
+    for(i = 0; i < n; i++)
+        C[i] = (int*)malloc(sizeof(int) * n);
+
+    for (i = 0; i < n; i++)
     {
-        power++;
-        div *= 10;
+        for (j = 0; j < n; j++)
+        {
+             s = 0;
+             for (z = 0; z < n; z++)
+                s = s + A[i][z] * B[z][j];
+             C[i][j] = s;
+        }
     }
-    while (power >= 0)
+    return C;
+}
+
+int** calculatingPower (int **A, int n, int k)
+{
+    int i, j;
+    int **B = (int**)malloc(sizeof(int*) * n);
+    for(i = 0; i < n; i++)
+        B[i] = (int*)malloc(sizeof(int) * n);
+    if (k == 0)
     {
-        printf ("%s", table[power][nr / div]);
-        nr %= div;
-        power--; div /= 10;
+        for (i = 0; i < n; i++)
+        {
+            for (j = 0; j < n; j++)
+            {
+                if (i == j)
+                {
+                    B[i][j] = 1;
+                }
+                else
+                {
+                    B[i][j] = 0;
+                }
+            }
+        }
+        return B;
     }
+    B = A;
+    for (i = 1; i < k; i++)
+    {
+        A = Multiplication (A, B, n);
+    }
+    return A;
 }
 
 int main ()
 {
-    char *table[4][10] =
+    int n, k, i, j;
+    printf ("order of the matrix = ");
+    scanf ("%d", &n);
+    int **A = (int**)malloc(sizeof(int*) * n);
+    for(i = 0; i < n; i++)
+        A[i] = (int*)malloc(sizeof(int) * n);
+    for (i = 0; i < n; i++)
     {
+        for (j = 0; j < n; j++)
         {
-            "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"
-        },
-        {
-            "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"
-        },
-        {
-            "", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"
-        },
-        {
-            "", "M", "MM", "MMM"
+            scanf ("%d", &A[i][j]);
         }
-    };
-    int nr;
-    scanf ("%d", &nr);
-    ConvertToRoman (nr, table);
+    }
+    printf ("power = ");
+    scanf ("%d", &k);
+    A = calculatingPower (A, n, k);
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            printf ("%d ", A[i][j]);
+        }
+        printf ("\n");
+    }
+
     return 0;
 }

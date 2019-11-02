@@ -1,81 +1,52 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-int convertToArab (char s[25])
+int* computingPolynomials (int *p, int *q, int n, int m)
 {
-    int l = strlen (s), nr = 0;
-    int i = 0;
-    while (i < l)
+    int i, j, *r;
+    r = (int*)malloc(sizeof (int) * (m + n + 1));
+    for (i = 0; i <= m + n; i++)
     {
-        if (s[i] == 'I')
-        {
-            if (s[i + 1] != 'V' && s[i + 1] != 'X')
-                nr++;
-            else
-            {
-                if (s[i + 1] == 'V')
-                    nr += 4;
-                else nr += 9;
-                i++;
-            }
-        }
-        else
-        {
-            if (s[i] == 'V')
-                nr += 5;
-            else
-            {
-                if (s[i] == 'X')
-                {
-                    if (s[i + 1] != 'L' && s[i + 1] != 'C')
-                         nr += 10;
-                    else
-                    {
-                        if (s[i + 1] == 'L')
-                            nr += 40;
-                        else
-                            nr += 90;
-                        i++;
-                    }
-                }
-                else
-                {
-                    if (s[i] == 'L')
-                        nr += 50;
-                    else
-                    {
-                        if (s[i] == 'C')
-                        {
-                            if (s[i + 1] != 'D' && s[i + 1] != 'M')
-                                nr += 100;
-                            else
-                            {
-                                if (s[i + 1] == 'D')
-                                    nr += 400;
-                                else nr += 900;
-                                i++;
-                            }
-                        }
-                        else
-                        {
-                            if (s[i] == 'D')
-                                nr += 500;
-                            else nr += 1000;
-                        }
-                    }
-                }
-            }
-        }
-        i++;
+        r[i] = 0;
     }
-    return nr;
+    for (i = 0; i <= n; i++)
+    {
+        for (j = 0; j <= m; j++)
+        {
+            r[i + j] += p[i] * q[j];
+        }
+    }
+    return r;
 }
 
-int main ()
+int main()
 {
-    char s[25];
-    scanf ("%s", s);
-    printf ("%d", convertToArab (s));
+    int i, *p, *q, m, n, *r;
+    printf ("order of p = ");
+    scanf ("%d", &n);
+    p = (int*)malloc(sizeof (int) * (n + 1));
+    for (i = 0; i <= n; i++)
+    {
+        printf ("p%d = ", i);
+        scanf ("%d", &p[i]);
+    }
+    printf ("order of q = ");
+    scanf ("%d", &m);
+    q = (int*)malloc(sizeof (int) * (m + 1));
+    for (i = 0; i <= m; i++)
+    {
+        printf ("q%d = ", i);
+        scanf ("%d", &q[i]);
+    }
+    r = computingPolynomials (p, q, n, m);
+    printf ("r = p * q = ");
+    for (i = 0; i <= m + n; i++)
+    {
+        printf ("%d * (x ^ %d) ", r[i], i);
+        if (i != m + n)
+        {
+            printf (" + ");
+        }
+    }
     return 0;
 }
