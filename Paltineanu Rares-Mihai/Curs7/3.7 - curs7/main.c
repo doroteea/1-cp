@@ -35,7 +35,7 @@ int main()
 
     int *pol = (int *)malloc(sizeof(int) * (degree + 1));
 
-    read(pol, degree, &x);
+    read(pol, degree, &x); printf("%d\n\n\n", x);
     valueDev(pol, degree, x, &val);
 
     printf("The value is: %lf", val);
