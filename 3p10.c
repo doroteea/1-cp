@@ -1,26 +1,61 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int MinimumNoOfBank (int amount, int banknotes[6])
+int** transposedMatrix (int **A, int rows, int cols)
 {
-    int i = 5, minNumber = 0;
-    while (amount > 0 && i >= 0)
+    int i, j;
+    int **At = (int**)malloc(sizeof (int*) * cols);
+    for (i = 0; i < cols; i++)
     {
-        while (banknotes[i] <= amount)
-        {
-            amount -= banknotes[i];
-            minNumber++;
-        }
-        i--;
+        At[i] = (int*)malloc(sizeof (int) * rows);
     }
-    return minNumber;
+
+    for (i = 0; i < rows; i++)
+    {
+        for (j = 0; j < cols; j++)
+        {
+            At[j][i] = A[i][j];
+        }
+    }
+    return At;
 }
 
 int main ()
 {
-    int amount, banknotes[6] = {1, 5, 10, 50, 100, 200};
-    scanf ("%d", &amount);
-    printf ("The minimum number of banknotes needed to pay %d RON is %d", amount, MinimumNoOfBank (amount, banknotes));
+    int i, j, rows, cols;
+    printf ("number of rows = ");
+    scanf ("%d", &rows);
+    printf ("number of columns = ");
+    scanf ("%d", &cols);
+    int **A = (int**)malloc(sizeof (int*) * rows);
+    for (i = 0; i < rows; i++)
+    {
+        A[i] = (int*)malloc(sizeof (int) * cols);
+    }
+    for (i = 0; i < rows; i++)
+    {
+        for (j = 0; j < cols; j++)
+        {
+            scanf ("%d", &A[i][j]);
+        }
+    }
+
+    int **At = (int**)malloc(sizeof (int*) * cols);
+    for (i = 0; i < cols; i++)
+    {
+        At[i] = (int*)malloc(sizeof (int) * rows);
+    }
+
+    At = transposedMatrix (A, rows, cols);
+    printf ("the transposed of the matrix is:\n");
+    for (i = 0; i < cols; i++)
+    {
+        for (j = 0; j < rows; j++)
+        {
+            printf ("%d ", At[i][j]);
+        }
+        printf ("\n");
+    }
 
     return 0;
 }
