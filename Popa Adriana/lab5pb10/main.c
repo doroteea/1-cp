@@ -3,10 +3,10 @@
 
 int main()
 {
-    int n,i,a[100]={500,200,100,50,10,5,1},ct=0;
+    int n,i,a[7]= {500,200,100,50,10,5,1},ct=0;
     printf("introduce the amount of money:");
     scanf("%d",&n);
-    for(i=0;i<7;i++)
+    for(i=0; i<7; i++)
     {
         while(n>=a[i])
         {
