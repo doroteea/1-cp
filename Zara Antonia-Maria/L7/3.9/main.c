@@ -33,16 +33,16 @@ int ** multiplyMatrix(int **mat1, int **mat2,int rows)
         productMatrix[i]= (int*)malloc(sizeof(int)*rows);
     }
 
-    for(i=0;i<rows;i++)
-        for(j=0;j<rows;j++)
+    for(i=0; i<rows; i++)
+        for(j=0; j<rows; j++)
             productMatrix[i][j]=0;
 
-    for(i=0;i<rows;i++)
-        for(j=0;j<rows;j++)
-    {
-        for(k=0;k<rows;k++)
-            productMatrix[i][j]=productMatrix[i][j]+mat1[i][k]*mat2[k][j];
-    }
+    for(i=0; i<rows; i++)
+        for(j=0; j<rows; j++)
+        {
+            for(k=0; k<rows; k++)
+                productMatrix[i][j]=productMatrix[i][j]+mat1[i][k]*mat2[k][j];
+        }
 
     return productMatrix;
 
@@ -51,12 +51,13 @@ int ** multiplyMatrix(int **mat1, int **mat2,int rows)
 void printMatrix(int **mat,int rows)
 {
     int i,j;
-    for(i=0;i<rows;i++)
-        {
-            for(j=0;j<rows;j++)
-                printf("%d ",mat[i][j]);
-            printf("\n");
-        }
+    printf("The matrix is:\n");
+    for(i=0; i<rows; i++)
+    {
+        for(j=0; j<rows; j++)
+            printf("%d ",mat[i][j]);
+        printf("\n");
+    }
 }
 
 int main()
@@ -76,14 +77,14 @@ int main()
         ///growingMatrix e matricea pe care o tot inmultesc ca sa ajung la putere
 
         for(i=0; i<rows; i++)
-            {
-                growingMatrix[i]= (int*)malloc(sizeof(int)*rows);
-            }
-
-        growingMatrix = multiplyMatrix(matrix,matrix,power);
-        for(i=2;i<power;i++)
         {
-            growingMatrix = multiplyMatrix(growingMatrix,matrix,power);
+            growingMatrix[i]= (int*)malloc(sizeof(int)*rows);
+        }
+
+        growingMatrix = multiplyMatrix(matrix,matrix,rows);
+        for(i=2; i<power; i++)
+        {
+            growingMatrix = multiplyMatrix(growingMatrix,matrix,rows);
             /// <=> growingMatrix = growingMatrix*matrix;
         }
 
