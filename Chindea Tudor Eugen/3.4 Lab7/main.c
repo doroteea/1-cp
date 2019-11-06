@@ -33,20 +33,23 @@ int main()
             {
                 row3[sir3++]=row1[sir1++];
             }
-            else{
+            else
+            {
                 sir1++;
             }
         }
         else if(row2[sir2]<=row1[sir1]  )
         {
-            if(row3[sir3-1]!=row2[sir2]){
-            row3[sir3++]=row2[sir2++];
+            if(row3[sir3-1]!=row2[sir2])
+            {
+                row3[sir3++]=row2[sir2++];
             }
-            else{
+            else
+            {
                 sir2++;
             }
         }
-        }
+    }
 
     if(sir1<6-1)
     {
