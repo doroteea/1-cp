@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1573074691 source:d:\computer programming\1-cp\crisan cristian alexandru\09 3.8\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
