@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1572418407 source:c:\users\alex\desktop\programming lab\1-cp\patica andreea\lab6\1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"head.h"
+
+1572418122 source:c:\users\alex\desktop\programming lab\1-cp\patica andreea\lab6\1\head.c
+	<stdio.h>
+
+1572418040 c:\users\alex\desktop\programming lab\1-cp\patica andreea\lab6\1\head.h
+

@@ -35,7 +35,8 @@ void printRoman (int number)
             divisor /=10;
             --power;
         }
-        else break;
+        else
+            break;
     }
 }
 
