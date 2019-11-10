@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1572279407 source:c:\users\acasa\desktop\utcn\computer programming\1-cp\rotaru andrei\prob35lab5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
