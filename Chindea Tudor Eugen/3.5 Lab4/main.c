@@ -26,8 +26,9 @@ void multiplication(int** mat1,int** mat2,int row,int** mat3)
 }
 int main()
 {
-    int i,j,rows=2;
-
+    int i,j,rows;
+    printf("Numarul de randuri si coloane=");
+    scanf("%d",&rows);
     int** A = (int**)malloc(sizeof(int*)* rows);
     int** B=(int**)malloc(sizeof(int*) * rows);
     int** C=(int**)malloc(sizeof(int*) * rows);
