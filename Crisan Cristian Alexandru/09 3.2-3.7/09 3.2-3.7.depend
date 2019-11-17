@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1573994959 source:d:\computer programming\1-cp\crisan cristian alexandru\09 3.2-3.7\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1573994386 source:d:\computer programming\1-cp\crisan cristian alexandru\longestandbiggestalphanumericsequence\head.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
