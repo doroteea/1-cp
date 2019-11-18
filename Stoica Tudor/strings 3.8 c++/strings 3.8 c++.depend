@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1574112669 source:d:\info\c facultate\1-cp\stoica tudor\strings 3.8 c++\main.cpp
+	<fstream>
+	<cstring>
+
