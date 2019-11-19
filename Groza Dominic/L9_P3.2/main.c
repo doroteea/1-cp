@@ -15,10 +15,10 @@ int main() {
     int posi,len;
     char initial_String[30];
     char sub_String[30];
-    printf("Hi! Enter the position from which you want the substring to start and it's length");
+    printf("Hi! Enter the starting position and length:");
     scanf("%d,%d", &posi,&len);
     printf("Now input your string");
-    scanf("%[^\n]s",initial_String);
+    scanf("%s[^\n]",initial_String);
     substring(initial_String, sub_String, posi, len);
 
     printf ("%s",sub_String);
