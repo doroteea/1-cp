@@ -53,6 +53,7 @@ void DisplayAuthorsAscending(Book *Array)
 {
     char CurrentlyDisplaying[20];
     strcpy(CurrentlyDisplaying,Array[0].author);
+    printf("%s\n",CurrentlyDisplaying);
     for(int i=1; i<NrOfElements; i++)
     {
         if(strcmp(Array[i].author,CurrentlyDisplaying)!=0)
@@ -63,13 +64,13 @@ void DisplayAuthorsAscending(Book *Array)
     }
 
 }
-/*void Display(Book *Array)
+void Display(Book *Array)
 {
-    for(int i=0;i<NrOfElements;i++)
+    for(int i=0; i<NrOfElements; i++)
     {
-
+        printf("%s de %s publicata in anul %d\n",Array[i].title,Array[i].author,Array[i].year);
     }
-}*/
+}
 void AscendingSortByPublicationDate(Book *Array)
 {
 
@@ -90,23 +91,48 @@ void AscendingSortByPublicationDate(Book *Array)
 }
 int main()
 {
-
+    int choice;
     printf("Give the number of books:");
     scanf("%d",&NrOfElements);
     Book *ArrayOfBooks=(Book*)malloc(sizeof(Book)*NrOfElements);
     for(int i=0; i<NrOfElements; i++)
-    {  printf("da\n");
+    {
         printf("Give the title of the book %d :",i+1);
-        gets(ArrayOfBooks[i].title);
+        scanf("%s",&ArrayOfBooks[i].title);
+        // gets(ArrayOfBooks[i].title);
         printf("Who's the author?");
         scanf("%s",&ArrayOfBooks[i].author);
         printf("When has the book been published?(year only)");
         scanf("%d",&ArrayOfBooks[i].year);
     }
-    AscendingSortByAuthorANDTitle(ArrayOfBooks);
-    printf("Authors in ascending order:\n");
-    DisplayAuthorsAscending(ArrayOfBooks);
-   // printf("Authors and the titles of their books in order of the publication year:\n");
+    printf("1.The names of the authors in alphabetic order.\n2.Authors and the titles of their books in order of the publication year.\n3.Exit\nWhich task do you want to be performed?");
+    scanf("%d",&choice);
+    while(choice!=3)
+    {
+        switch(choice)
+        {
+        case 1:
+        {
+            AscendingSortByAuthorANDTitle(ArrayOfBooks);
+            printf("Authors in ascending order:\n");
+            DisplayAuthorsAscending(ArrayOfBooks);
+            break;
+        }
+        case 2:
+        {
+            AscendingSortByPublicationDate(ArrayOfBooks);
+            Display(ArrayOfBooks);
+            break;
+        }
+        default:
+        {
+            printf("Invalid choice!");
+            break;
+        }
+        }
+    printf("1.The names of the authors in alphabetic order.\n2.Authors and the titles of their books in order of the publication year.\n3.Exit\nWhich task do you want to be performed?");
+    scanf("%d",&choice);
+    }
 
 
 
