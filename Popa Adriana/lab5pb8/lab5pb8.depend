@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1572374706 source:c:\users\adriana\desktop\1cp\1-cp\popa adriana\lab5pb8\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

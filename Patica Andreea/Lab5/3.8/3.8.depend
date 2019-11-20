@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1572353345 source:c:\users\alex\desktop\programming lab\1-cp\patica andreea\lab5\3.8\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

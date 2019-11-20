@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1571212192 source:d:\grupa 3 eng\semigrupa2\pasca eduard\lab3\3.5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+

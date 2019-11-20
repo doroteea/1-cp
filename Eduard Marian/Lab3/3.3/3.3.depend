@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1571210329 source:d:\grupa 3 eng\semigrupa2\pasca eduard\lab3\3.3\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1571210849 source:d:\grupa 3 eng\semigrupa2\pasca eduard\lab3\3.4.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
