@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1574234204 source:c:\users\alex\desktop\predare\2019-2020 - sem 1\1-cp\!code\structures - ex. 3\main.c
+	"students.h"
+
+1574235440 c:\users\alex\desktop\predare\2019-2020 - sem 1\1-cp\!code\structures - ex. 3\students.h
+	<stdio.h>
+	<stdlib.h>
+
+1574235755 source:c:\users\alex\desktop\predare\2019-2020 - sem 1\1-cp\!code\structures - ex. 3\students.c
+	"students.h"
+
