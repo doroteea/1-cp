@@ -1,23 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct {
-    int year;
-    int month;
-    int day;
-} date;
-
-typedef struct {
-    char * name;
-    date dateOfBirth;
-    char * address;
-} student;
+#include "students.h"
 
 int main()
 {
-    student a;
-    a.address = (char*) malloc(sizeof(char)*100);
-    gets(a.address);
-    puts(a.address);
+    int n;
+    printf("Input how many students you'll read:\nn=");
+    scanf("%d",&n);
+    student * students = readStudents(n);
     return 0;
 }
