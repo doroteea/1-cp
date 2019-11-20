@@ -8,6 +8,7 @@ typedef struct {
     int day;
     int month;
     int year;
+
 }birthday;
 
 typedef struct {
@@ -36,6 +37,7 @@ void read(student *g, int n) {
     for(int i = 0; i < n; i++) {
 
         printf("Please enter the name: ");
+
         gets(g[i].name);
 
         printf("Please enter the address: ");
