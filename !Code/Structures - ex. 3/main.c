@@ -15,6 +15,9 @@ typedef struct {
 
 int main()
 {
-    printf("Hello world!\n");
+    student a;
+    a.address = (char*) malloc(sizeof(char)*100);
+    gets(a.address);
+    puts(a.address);
     return 0;
 }
