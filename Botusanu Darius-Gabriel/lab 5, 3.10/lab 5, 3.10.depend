@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1573986291 source:c:\users\darius\desktop\1-cp\botusanu darius-gabriel\lab 5, 3.10\main.c
+	<stdio.h>
+	<stdlib.h>
+	"header.c"
+
+1573986223 source:c:\users\darius\desktop\1-cp\botusanu darius-gabriel\lab 5, 3.10\functions.c
+	<stdio.h>
+	<stdlib.h>
+
+1573986291 source:c:\users\darius\desktop\1-cp\botusanu darius-gabriel\lab 5, 3.10\header.c
+
+1573986291 c:\users\darius\desktop\1-cp\botusanu darius-gabriel\lab 5, 3.10\header.c
+

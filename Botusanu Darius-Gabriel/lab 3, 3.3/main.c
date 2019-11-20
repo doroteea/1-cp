@@ -1,28 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
-/*Thanks for your time Alex, I am really grateful for your help */
+#include <math.h>
+#include "header.c"
+#define ONEDEGREE  0.01745329252
 
 int main()
 {
-    double r, n, PI, sine, cosine, tg;
-    PI=3.14;
-    printf("Please input your angle in radians: ");
-    scanf("%lf", &r);
-    double sin(double r);
-    double cos(double r);
-    sine= sin(r);
-    cosine= cos(r);
-    tg=sin/cos;
-    n=(r*180)/PI;
-    printf("\n This is your angle in degrees: %lf", n);
-    printf("\n sin= %lf", sine);
-    printf("\n cos= %lf", cosine);
-    printf("\n tg= %lf", tg);
+    printf("Please input the value of an angle  in degrees (from 0 to 360): ");
+    int angle=checkAngle(readAngle());
+    printf("\nThis is the value of sine(%d)=%2.f",angle,sine(convertToReadians(angle)));
+    printf("\nThis is the value of cosine(%d)=%2.f",angle,cosine(convertToReadians(angle)));
+    printf("\nThis is the value of tangent(%d)=%2.f",angle,tangent(convertToReadians(angle)));
     return 0;
 }
-
-
-
-
-
 

@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1573935205 source:c:\users\darius\desktop\1-cp\botusanu darius-gabriel\lab 3, 3.14\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
+1573935415 source:c:\users\darius\desktop\1-cp\botusanu darius-gabriel\lab 3, 3.14\functions.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
+1573935563 source:c:\users\darius\desktop\1-cp\botusanu darius-gabriel\lab 3, 3.14\head.c
+
