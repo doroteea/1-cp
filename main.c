@@ -5,11 +5,11 @@
 
 int main()
 {
-    student *group = (student*) malloc (sizeof (student) * 100);
     int n;
     printf ("How many students? n = ");
     scanf ("%d", &n);
     getchar ();
+    student *group = (student*) malloc (sizeof (student) * 100);
     for (int i = 0; i < n; i++)
     {
         group[i] = readStud (group, i);

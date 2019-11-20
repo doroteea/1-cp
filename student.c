@@ -8,7 +8,7 @@ student readStud (student *group, int i)
     printf ("name of student#%d: ", i);
     group[i].name = (char*) malloc (sizeof (char) * 35);
     gets (group[i].name);
-    printf ("date of birth (day, month year): ");
+    printf ("date of birth (day, month, year): ");
     scanf ("%d", &group[i].birthDate.day);
     scanf ("%d", &group[i].birthDate.month);
     scanf ("%d", &group[i].birthDate.year);
