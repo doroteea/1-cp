@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-void substring(char s[], char sub[], int p, int l){
+void subString(char s[], char sub[], int p, int l){
     int c=0;
 
     while (c<l){
@@ -19,7 +19,7 @@ int main() {
     scanf("%d,%d", &posi,&len);
     printf("Now input your string");
     scanf("%s[^\n]",initial_String);
-    substring(initial_String, sub_String, posi, len);
+    subString(initial_String, sub_String, posi, len);
 
     printf ("%s",sub_String);
 

@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Dominic/Desktop/Stuff/CP/CP Lab/Git/1-cp/Groza Dominic/L9_P3.3/main.c
+stdio.h
+-
+string.h
+-
+
