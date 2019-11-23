@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+char *initial_String;
+char *sub_String;
 
 void subString(char s[], char sub[], int p, int l){
     int c=0;
@@ -13,8 +15,8 @@ void subString(char s[], char sub[], int p, int l){
 }
 int main() {
     int posi,len;
-    char initial_String[30];
-    char sub_String[30];
+    initial_String = (char*)malloc(30*sizeof(char));
+    sub_String = (char*)malloc(30* sizeof(char));
     printf("Hi! Enter the starting position and length:");
     scanf("%d,%d", &posi,&len);
     printf("Now input your string");
@@ -23,5 +25,5 @@ int main() {
 
     printf ("%s",sub_String);
 
-return 0;
+    return 0;
 }

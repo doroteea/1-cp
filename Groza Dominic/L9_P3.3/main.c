@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 
 const char removeFromString( char str[] , int t)
 {
-    int i,j;
+    int j;
     for(j=0; j<t; j++)
     {
                 str[j]=str[j+1];
@@ -13,16 +14,16 @@ const char removeFromString( char str[] , int t)
 }
 
 int main() {
-    char string1[50];
-    char string2[50];
-    char string3[50];
+   char *string1 = (char*)malloc(sizeof(char)*50);
+   char *string2 = (char*)malloc(sizeof(char)*50);
+   char *string3 = (char*)malloc(sizeof(char)*50);
     int posi;
 
     printf("Hello, World!\n");
     printf("Enter your string: ");
-    scanf("%s[^\n]",&string1);
+    scanf("%s[^\n]",string1);
     printf ("Enter the string you want to enter ");
-    scanf ("%s[^\n]",&string2);
+    scanf ("%s[^\n]",string2);
     scanf ("%d",&posi);
     strncpy(string3, string1, posi-1);
     removeFromString(string1,strlen(string1));
