@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1574797396 source:d:\c\1-cp\dan tudor\10 - 3.3\students.c
+	"students.h"
+
+1574240140 d:\c\1-cp\dan tudor\10 - 3.3\students.h
+	<stdio.h>
+	<stdlib.h>
+
+1574242610 source:d:\c\1-cp\dan tudor\10 - 3.3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"students.h"
+
