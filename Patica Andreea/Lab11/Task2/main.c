@@ -18,10 +18,8 @@ double convertStringIntoNumber (char *sourceString)
     double p=1.0;
     double number=0.0;
     bool dot=false;
-//    printf("f %s ", sourceString);
     int size=strlen(sourceString);
     size--;
-//    printf("%d\n", size);
     for (int i=0; i<size; i++)
     {
         if (sourceString[i]=='.')
@@ -39,7 +37,6 @@ double convertStringIntoNumber (char *sourceString)
             p/=10;
         }
     }
-//    printf("%f\n", number);
     return number;
 }
 
@@ -77,9 +74,7 @@ void function(char *strbuf, items *item)
 
     p=strtok(NULL, ", ");
     strcpy(aux, p);
-//    printf("%s\n", aux);
     item->price=convertStringIntoNumber(aux);
-//    printf("%f\n", item->price);
 
 }
 
