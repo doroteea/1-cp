@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1574841503 source:c:\users\alex\desktop\programming lab\1-cp\patica andreea\lab11\task2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+
