@@ -11,7 +11,7 @@ void print(int **a,int n,int m)
             printf(" %d ",&a[i][j]);
         }
         printf("\n");
-    }
+
 }
 
 void transpose(int **a,int n,int m)
@@ -40,9 +40,9 @@ int main()
         for(j=0; j<m; j++)
         {
             printf("mat[%d][%d]=",i,j);
-            scanf("%d",&a[i][j]);
+            scanf("%d",*a[i][j]);
         }
     print(&a,&n,&m);
-    transpose(a,n,m);
+    transpose(*a,*n,*m);
     return 0;
 }
