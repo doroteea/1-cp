@@ -6,7 +6,8 @@ const int MAX_LINE_LENGTH = 2000;
 const int MAX_LENGTH = 200;
 
 
-typedef struct {
+typedef struct
+{
     int code;
     char * name;
     char * unitOfMeasure;
@@ -14,12 +15,14 @@ typedef struct {
     float price;
 } product;
 
-void initializeProduct(product * prod) {
+void initializeProduct(product * prod)
+{
     prod->name = (char*)malloc(sizeof(char)*MAX_LENGTH);
     prod->unitOfMeasure = (char*)malloc(sizeof(char)*MAX_LENGTH);
 }
 
-void printProduct(product prod) {
+void printProduct(product prod)
+{
     printf("Product: %d,%s,%s,%d,%f\n", prod.code, prod.name, prod.unitOfMeasure, prod.amount, prod.price);
 }
 
@@ -30,17 +33,29 @@ int main()
     char * strbuf = (char*) malloc(sizeof(char)*MAX_LENGTH);
 
     product * products = (product*) malloc(sizeof(product)*MAX_PRODUCTS);
-    for(int i=0; i<MAX_PRODUCTS; i++) {
+    for(int i=0; i<MAX_PRODUCTS; i++)
+    {
         initializeProduct(&products[i]);
     }
 
     int pCount = 0;
-    while(fgets(strbuf, MAX_LENGTH, f) != NULL) {
+    /** USE THIS **/
+    while(fgets(strbuf, MAX_LENGTH, f) != NULL)
+    {
         sscanf(strbuf,"%d %s %s %d %f",&products[pCount].code,products[pCount].name,products[pCount].unitOfMeasure,&products[pCount].amount,&products[pCount].price);
 
         printProduct(products[pCount]);
         pCount++;
     }
+
+    /** OR THIS - NOT BOTH!!! **/
+    while(fscanf(f,"%d %s %s %d %f\n",&products[pCount].code,products[pCount].name,products[pCount].unitOfMeasure,&products[pCount].amount,&products[pCount].price) != EOF)
+    {
+        printProduct(products[pCount]);
+        pCount++;
+    }
+
+
 
 
     fclose(f);
