@@ -8,7 +8,7 @@ void print(int **a,int n,int m)
     {
         for(j=0; j<m; j++)
         {
-            printf(" %d ",a[i][j]);
+            printf(" %d ",&a[i][j]);
         }
         printf("\n");
     }
@@ -30,9 +30,9 @@ int main()
 {
     int n,i,j,m;
     printf("n=");
-    scanf("%d",&n);
+    scanf("%d",n);
     printf("m=");
-    scanf("%d",&m);
+    scanf("%d",m);
     int** a=(int**)(malloc(sizeof(int*)*n));
     for(i=0; i<n; i++)
         a[i]=(int*)(malloc(sizeof(int*)*m));
@@ -42,7 +42,7 @@ int main()
             printf("mat[%d][%d]=",i,j);
             scanf("%d",&a[i][j]);
         }
-    print(a,n,m);
+    print(&a,&n,&m);
     transpose(a,n,m);
     return 0;
 }
