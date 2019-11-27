@@ -1,40 +1,116 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define MAXSIZE 20
-int **mat=(int*)malloc(sizeof(int*)*rows)
-int multiply(int n, float b[n][n], float c[n][n], float p[n][]);
+
+float **addition(int *size, float **A, float **B)
 {
-    p[][]=b[][]*c[];
+    float **sum=(float**)malloc(sizeof(float*)*MAXSIZE);
+    int i,j;
+    for(i=0; i<(*size); i++)
+    {
+        *(sum+i+1)=(float*)malloc(sizeof(float)*MAXSIZE);
+    }
+    for(i=0; i<(*size); i++)
+    {
+        for(j=0; j<(*size); j++)
+        {
+            sum[i+1][j+1]=A[i+1][j+1]+B[i+1][j+1]*2;
+        }
+    }
+    return sum;
 }
-int addition(int n, float b[][], float c[][], float s[][])
+
+float **difference(int *size, float **A, float **B)
 {
-    s[][]=b[][]+c[][];
+    float **difference=(float**)malloc(sizeof(float*)*MAXSIZE);
+    int i,j;
+    for(i=0; i<(*size); i++)
+    {
+        *(difference+i+1)=(float*)malloc(sizeof(float)*MAXSIZE);
+    }
+    for(i=0; i<(*size); i++)
+    {
+        for(j=0; j<(*size); j++)
+        {
+            difference[i+1][j+1]=A[i+1][j+1]-B[i+1][j+1];
+        }
+    }
+    return difference;
 }
-int substraction(int n, float b[][], float c[][], float d[][])
+
+float **multiply(int *size, float **A, float **B)
 {
-    d[][]=b[][]-c[][];
+    int i,j,k;
+    float **product=(float**)malloc(sizeof(float*)*MAXSIZE);
+    for(i=0; i<(*size); i++)
+    {
+        *(product+i+1)=(float*)malloc(sizeof(float)*MAXSIZE);
+    }
+    for(i=0; i<*size; i++)
+    {
+        for(j=0; j<*size; j++)
+        {
+            product[i+1][j+1]=0;
+            for(k=0; k<*size; k++)
+            {
+                product[i+1][j+1]+=A[i+1][k+1]*B[k+1][j+1];
+            }
+        }
+    }
+    return product;
 }
 int main()
 {
+    int i, j, size;
 
-    int i,j,n;
-    printf("\nPlease input the size of the square matrices: ");
-    scanf("%d", &n);
-    for(i=0;i<n;i++)
+    printf("\nPlease input the size of your quadratic matrices:");
+    scanf("%d",&size);
+
+    float **A=(float**)malloc(sizeof(float*)*MAXSIZE);
+    float **B=(float**)malloc(sizeof(float*)*MAXSIZE);
+    float **C=(float**)malloc(sizeof(float*)*MAXSIZE);
+
+    for(i=0; i<size; i++)
     {
-        printf("\nb[%d][%d]",i,i);
-        scanf("%f", &b[i][i]);
-        printf("\n");
-        printf("\nc[%d][%d]",i,i);
-        scanf("%f", &c[i][i]);
+        *(A+i+1)=(float*)malloc(sizeof(float)*size);
     }
-    multiply(*n,b[][],c[][],p[][]);
-    addition(*n,b[][],c[][],s[][]);
-    float a[][];
-    for(i=0;i<=n:i++)
+    for(i=0; i<size; i++)
     {
-        a[i][i]=substraction(n,p[][],2*s[]);
-        printf("%f",a[i][i]);
+        *(B+i+1)=(float*)malloc(sizeof(float)*size);/*Hey Alex, why doesn't it allocate enough space if I write simply *(A+I)?*/
     }
+    for(i=0; i<size; i++)
+    {
+        *(C+i+1)=(float*)malloc(sizeof(float)*size);
+    }
+
+
+    for(i=0; i<size; i++)
+    {
+        for(j=0; j<size; j++)
+        {
+            printf("\nB[%d][%d]=",i+1,j+1);
+            scanf("%f",&A[i+1][j+1]);
+        }
+
+    }
+
+    for(i=0; i<size; i++)
+    {
+        for(j=0; j<size; j++)
+        {
+            printf("\nC[%d][%d]=",i+1,j+1);
+            scanf("%f",&B[i+1][j+1]);
+        }
+    }
+    A=difference(&size, multiply(&size,B,C), addition(&size, B, C));
+    printf("\nA=");
+    for(i=0; i<size; i++)
+    {
+        for(j=0; j<size; j++)
+        {
+            printf("\nA[%d][%d]=%f",i+1,j+1,A[i+1][j+1]);
+        }
+    }
+
     return 0;
 }

@@ -3,9 +3,10 @@
 
 int main()
 {
-    unsigned int SeqSize, i, minPos, maxPos
+    unsigned int SeqSize, i, minPos, maxPos;
     float max, min;
-    printf("\n Please input the size of the sequence of numbers: ");   scanf("%d", &SeqSize);
+    printf("\nPlease input the size of the sequence of numbers: ");   scanf("%d", &SeqSize);
+    printf("\nPlease input the numbers: ");
     float var[SeqSize];
     for(i=0; i<SeqSize; i++)
     {

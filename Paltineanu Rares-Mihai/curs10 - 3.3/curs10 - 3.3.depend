@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1574234957 source:d:\git ex\1-cp\paltineanu rares-mihai\curs10 - 3.3\read.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+
+1574235051 source:d:\git ex\1-cp\paltineanu rares-mihai\curs10 - 3.3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	"read.h"
+
+1574234957 d:\git ex\1-cp\paltineanu rares-mihai\curs10 - 3.3\read.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+
