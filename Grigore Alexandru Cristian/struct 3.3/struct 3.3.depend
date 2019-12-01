@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1574239183 source:c:\users\aa2\desktop\cp\1-cp\grigore alexandru cristian\struct 3.3\students.c
+	"students.h"
+
+1574770283 c:\users\aa2\desktop\cp\1-cp\grigore alexandru cristian\struct 3.3\students.h
+	<stdio.h>
+	<stdlib.h>
+
+1574237806 source:c:\users\aa2\desktop\cp\1-cp\grigore alexandru cristian\struct 3.3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"students.h"
+

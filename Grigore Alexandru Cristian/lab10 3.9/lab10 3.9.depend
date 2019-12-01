@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1574794692 source:c:\users\aa2\desktop\cp\1-cp\grigore alexandru cristian\lab10 3.9\lorry.c
+	"lorry.h"
+
+1574794726 source:c:\users\aa2\desktop\cp\1-cp\grigore alexandru cristian\lab10 3.9\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"lorry.h"
+
+1574792551 c:\users\aa2\desktop\cp\1-cp\grigore alexandru cristian\lab10 3.9\lorry.h
+	<stdio.h>
+	<stdlib.h>
+
