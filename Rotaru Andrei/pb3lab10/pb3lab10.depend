@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1574805400 source:c:\users\acasa\desktop\utcn\computer programming\1-cp\rotaru andrei\pb3lab10\main.c
+	<stdio.h>
+	<stdlib.h>
+	<process.h>
+	<string.h>
+	"students.h"
+
+1574805400 c:\users\acasa\desktop\utcn\computer programming\1-cp\rotaru andrei\pb3lab10\students.h
+	<stdio.h>
+	<stdlib.h>
+
+1574800780 source:c:\users\acasa\desktop\utcn\computer programming\1-cp\rotaru andrei\pb3lab10\students.c
+	"students.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
