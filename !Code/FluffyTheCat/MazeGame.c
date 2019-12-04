@@ -7,32 +7,21 @@ void play(maze m)
     int exit = 0;
     while(!exit)
     {
-        char move = getch();
-        switch(move)
+        char direction = getch();
+        if(pressedDirectionKey(direction))
         {
-        case 'w':
-            changeFluffyPosition(&m, UP);
-            break;
-        case 'a':
-            changeFluffyPosition(&m, LEFT);
-            break;
-        case 's':
-            changeFluffyPosition(&m, DOWN);
-            break;
-        case 'd':
-            changeFluffyPosition(&m, RIGHT);
-            break;
-        case 'e':
-            exit = 1;
-            break;
-        default:
-            printf("N/A\n");
-            break;
+            changeFluffyPosition(&m, direction);
         }
+        else if(pressedEndGame(direction))
+        {
+            printf("Exiting game...\n");
+            exit = 1;
+        }
+
         if(reachedTheEnd(m))
         {
             system("cls");
-            printf("Meow. I reached it. Purr\n");
+            printf("Meow. I reached the end. Purr\n");
             exit = 1;
         }
         else
@@ -45,23 +34,19 @@ void play(maze m)
 void changeFluffyPosition(maze * m, char direction)
 {
     location oldPosition = m->fluffy;
-    location newPosition;
+    location newPosition = oldPosition;
     switch(direction)
     {
-    case 'w':
+    case UP:
         newPosition.x = oldPosition.x - 1;
-        newPosition.y = oldPosition.y;
         break;
-    case 'a':
-        newPosition.x = oldPosition.x;
+    case LEFT:
         newPosition.y = oldPosition.y - 1;
         break;
-    case 's':
+    case DOWN:
         newPosition.x = oldPosition.x + 1;
-        newPosition.y = oldPosition.y;
         break;
-    case 'd':
-        newPosition.x = oldPosition.x;
+    case RIGHT:
         newPosition.y = oldPosition.y + 1;
         break;
     }
@@ -70,12 +55,6 @@ void changeFluffyPosition(maze * m, char direction)
         m->blocks[oldPosition.x][oldPosition.y] = PATH;
         m->fluffy = newPosition;
     }
-}
-
-int newPositionIsValid(location newPosition, maze m)
-{
-    return (newPosition.x>=0 && newPosition.x <m.dim.x) && (newPosition.y >= 0 && newPosition.y < m.dim.y)
-           &&(m.blocks[newPosition.x][newPosition.y] != WALL);
 }
 
 void printBoard(maze m)
@@ -91,7 +70,7 @@ void printBoard(maze m)
             current.y = j;
             if(isWithinRangeOfFluffy(m.fluffy, current))
             {
-                printf("%c",m.blocks[i][j]);
+                printf("%c", m.blocks[i][j]);
             }
             else
             {
@@ -112,3 +91,21 @@ int reachedTheEnd(maze m)
 {
     return m.blocks[m.fluffy.x][m.fluffy.y] == FINISH;
 }
+
+int newPositionIsValid(location newPosition, maze m)
+{
+    return (newPosition.x >= 0 && newPosition.x < m.dim.x) && (newPosition.y >= 0 && newPosition.y < m.dim.y)
+           && (m.blocks[newPosition.x][newPosition.y] != WALL);
+}
+
+int pressedDirectionKey(char direction)
+{
+    return direction == UP || direction == LEFT || direction == DOWN || direction == RIGHT;
+}
+
+int pressedEndGame(char direction)
+{
+    return direction == END_GAME;
+}
+
+

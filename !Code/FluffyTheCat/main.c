@@ -2,7 +2,6 @@
 
 int main()
 {
-    maze m = readMaze();
-    play(m);
+    play(readMaze());
     return 0;
 }
