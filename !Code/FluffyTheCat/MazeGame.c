@@ -65,10 +65,7 @@ void printBoard(maze m)
     {
         for(int j=0; j<m.dim.y; j++)
         {
-            location current;
-            current.x = i;
-            current.y = j;
-            if(isWithinRangeOfFluffy(m.fluffy, current))
+            if(isWithinRangeOfFluffy(m.fluffy, (location){i, j}))
             {
                 printf("%c", m.blocks[i][j]);
             }
