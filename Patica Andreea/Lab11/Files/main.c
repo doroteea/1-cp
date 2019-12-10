@@ -7,8 +7,7 @@ int main()
 {
     FILE * f;
 
-    f = fopen("text.txt","r");
-    f = fopen("text.out", "w");
+    f = fopen("text.txt","rw+");
 
     char * strbuf = (char*) malloc(sizeof(char)*MAX_LENGTH);
 

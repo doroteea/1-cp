@@ -40,7 +40,7 @@ double convertStringIntoNumber (char *sourceString)
     return number;
 }
 
-void function(char *strbuf, items *item)
+void parseString(char *strbuf, items *item)
 {
     char *aux = (char*)malloc(sizeof(char)*MAX_LENGTH);
     char *p;
@@ -88,7 +88,7 @@ int main()
     int nrOfItems=0;
     while (fgets(strbuf, MAX_LENGTH, f)!=NULL)
     {
-            function(strbuf, item+nrOfItems);
+            parseString(strbuf, item+nrOfItems);
             nrOfItems++;
     }
     fclose(f);
