@@ -4,7 +4,7 @@
 //
 //  Created by Sandor Doroteea on 10/22/19.
 //  Copyright © 2019 Doroteea Sandor. All rights reserved.
-//
+// comentariu
 
 #include <stdio.h>
 
