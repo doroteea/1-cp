@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/mxligr/Desktop/UNI/AN I/CP/LAB/repo/1-cp/Grama Malina Bianca/untitled/main.c
+stdio.h
+-
+

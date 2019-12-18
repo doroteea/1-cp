@@ -1,0 +1,3 @@
+/Users/mxligr/Desktop/UNI/AN I/CP/LAB/lab12-recursion/12 - 3.10 (Ack)/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/mxligr/Desktop/UNI/AN I/CP/LAB/lab12-recursion/12 - 3.10 (Ack)/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/mxligr/Desktop/UNI/AN I/CP/LAB/lab12-recursion/12 - 3.10 (Ack)/cmake-build-debug/CMakeFiles/12___3_10__Ack_.dir
