@@ -18,3 +18,21 @@
 	"MazeReader.h"
 	"math.h"
 
+1575484726 source:c:\users\alex\desktop\code\1-cp\!code\fluffythecat\main.c
+	"MazeGame.h"
+
+1575484689 c:\users\alex\desktop\code\1-cp\!code\fluffythecat\mazegame.h
+	"MazeReader.h"
+	"math.h"
+
+1575484720 c:\users\alex\desktop\code\1-cp\!code\fluffythecat\mazereader.h
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
+1575484686 source:c:\users\alex\desktop\code\1-cp\!code\fluffythecat\mazegame.c
+	"MazeGame.h"
+
+1575484694 source:c:\users\alex\desktop\code\1-cp\!code\fluffythecat\mazereader.c
+	"MazeReader.h"
+

@@ -1,26 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int main()
+int MergeVectors(int row1[6],int row2[5], int row3[11])
 {
-    float *row1=(float*)malloc(sizeof(float)*6);
-    float *row2=(float*)malloc(sizeof(float)*5);
-    float *row3=(float*)malloc(sizeof(float)*11);
-    float generator=0.6;
-    int i,sir3=0;
-    for(i=0; i<6; i++)
-    {
-        row1[i]=generator;
-        generator=generator+0.6;
-    }
-    generator=0.3;
 
-    for(i=0; i<5; i++)
-    {
-        row2[i]=generator;
-        generator=generator+0.3;
-    }
-    int sir1=0,sir2=0;
+    int sir1=0,sir2=0,sir3=0;
     if(row1[0]<row2[0])
         row3[sir3++]=row1[sir1++];
     else
@@ -65,6 +48,29 @@ int main()
             row3[sir3++]=row2[p];
         }
     }
+    return(sir3);
+}
+int main()
+{
+    float *row1=(float*)malloc(sizeof(float)*6);
+    float *row2=(float*)malloc(sizeof(float)*5);
+    float *row3=(float*)malloc(sizeof(float)*11);
+    float generator=0.6;
+    int i,sir3=0;
+    for(i=0; i<6; i++)
+    {
+        row1[i]=generator;
+        generator=generator+0.6;
+    }
+    generator=0.3;
+
+    for(i=0; i<5; i++)
+    {
+        row2[i]=generator;
+        generator=generator+0.3;
+    }
+
+    sir3= MergeVectors(row1,row2,row3);
     for(i=0; i<sir3; i++)
     {
         printf("%f ",row3[i]);

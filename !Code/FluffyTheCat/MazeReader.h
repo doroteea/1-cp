@@ -3,7 +3,6 @@
 #include <conio.h>
 #define LEVEL "FluffyMaze1.txt"
 
-
 static const char START = 's';
 static const char FINISH = 'f';
 static const char WALL = '*';
@@ -25,5 +24,3 @@ typedef struct
 } maze;
 
 maze readMaze();
-
-

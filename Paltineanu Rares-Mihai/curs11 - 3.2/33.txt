@@ -1,0 +1,6 @@
+code:34, name:nume2, amount:30, unit:40, price:1.5
+
+code:48, name:nume1, amount:40, unit:50, price:20.5
+
+code:89, name:nume3, amount:10, unit:10, price:2.4
+
