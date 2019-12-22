@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-void transposedMatrix(int mat1[6][6], int mat2[6][6],int row, int col)
+void transposedMatrix(int **mat1, int **mat2,int row, int col)
 {
     int i;
     for(i=0; i<row; i++)
