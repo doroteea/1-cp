@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1577453008 source:d:\computer programming\1-cp\crisan cristian alexandru\casualwood\main.c
+	"rws.h"
+
+1577452623 source:d:\computer programming\1-cp\crisan cristian alexandru\casualwood\rws.c
+	<stdlib.h>
+	<stdio.h>
+	<conio.h>
+	<string.h>
+	<stdbool.h>
+
+1577374064 d:\computer programming\1-cp\crisan cristian alexandru\casualwood\rws.h
+	<stdlib.h>
+	<stdio.h>
+	<conio.h>
+	<string.h>
+	<stdbool.h>
+
