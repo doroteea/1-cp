@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1577533905 source:d:\cpp\modular test\modular test\function.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
