@@ -32,6 +32,27 @@ void displayCarsWithTheSameColor(garage *car,int count,char *carColor)
         }
 }
 
+void sort(garage *car,int count)
+{
+    char *aux=(char*)malloc(sizeof(char)*MAX_LENGTH);
+    for(int i=0;i<count;i++)
+    {
+        for(int j=i+1;j<count;j++)
+        {
+            if(strcmp(car[i].owner,car[j].owner)>0)
+                {
+                    strcpy(aux,car[i].owner);
+                    strcpy(car[i].owner,car[j].owner);
+                    strcpy(car[j].owner,aux);
+                }
+        }
+    }
+    for(int i=0;i<count;i++)
+    {
+        puts(car[i].owner);
+    }
+
+}
 int main()
 {
     FILE *f=fopen("garage.txt","r");
@@ -46,20 +67,21 @@ int main()
     {
         sscanf(strbuf,"%s %s %s %s",car[count].brand,car[count].owner,car[count].color,car[count].number);
         puts(strbuf);
-        char *p=(char*)malloc(sizeof(char)*MAX_LENGTH);
-        p=strtok(strbuf,",");
-        puts(p);
-        while(p)
-        {
-            strcpy(car[count].color,p);
-            p=strtok(NULL,",");
-        }
+        strcpy(car[count].brand,strtok(strbuf,","));
+        strcpy(car[count].owner,strtok(NULL,","));
+        strcpy(car[count].color,strtok(NULL,","));
+        strcpy(car[count].number,strtok(NULL,","));
+        puts(car[count].brand);
+        puts(car[count].owner);
+        puts(car[count].color);
+        puts(car[count].number);
         count++;
 
     }
     char *carColor=(char*)malloc(sizeof(char)*MAX_LENGTH);
     gets(carColor);
     displayCarsWithTheSameColor(car,count,carColor);
-
+    sort(car,count);
+    fclose(f);
     return 0;
 }
