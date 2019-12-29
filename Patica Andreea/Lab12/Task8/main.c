@@ -1,3 +1,5 @@
+//3.8. Generate recursively the permutations of the set A having n elements.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
