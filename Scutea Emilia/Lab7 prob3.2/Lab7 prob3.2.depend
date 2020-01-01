@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1577459199 source:d:\documents\facultate\computer programming\probleme laborator\1-cp\scutea emilia\lab7 prob3.2\main.c
+	"header.h"
+
+1577459215 d:\documents\facultate\computer programming\probleme laborator\1-cp\scutea emilia\lab7 prob3.2\header.h
+
+1577459215 source:d:\documents\facultate\computer programming\probleme laborator\1-cp\scutea emilia\lab7 prob3.2\header.c
+	<stdio.h>
+	<stdlib.h>
+
