@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1578134269 source:d:\info\c facultate\1-cp\stoica tudor\sentence comparison\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	"header.h"
+
+1578134144 d:\info\c facultate\1-cp\stoica tudor\sentence comparison\header.h
+
