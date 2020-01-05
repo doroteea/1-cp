@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1574187539 source:d:\info\c facultate\1-cp\stoica tudor\3.6 strings\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
