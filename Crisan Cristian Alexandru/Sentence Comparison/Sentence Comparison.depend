@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1578337296 source:d:\computer programming\1-cp\crisan cristian alexandru\sentence comparison\main.c
+	<stdio.h>
+	<stdlib.h>
+	"functions.h"
+	<string.h>
+
+1578337231 source:d:\computer programming\1-cp\crisan cristian alexandru\sentence comparison\functions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1578334384 d:\computer programming\1-cp\crisan cristian alexandru\sentence comparison\functions.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
