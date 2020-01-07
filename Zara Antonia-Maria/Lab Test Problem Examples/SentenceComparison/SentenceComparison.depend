@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1578316414 source:c:\users\zaraa\desktop\cp lab\1-cp\zara antonia-maria\lab test problem examples\sentencecomparison\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
