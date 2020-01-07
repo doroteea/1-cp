@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1578239110 source:c:\users\acasa\desktop\utcn\computer programming\1-cp\rotaru andrei\lab3problems\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
