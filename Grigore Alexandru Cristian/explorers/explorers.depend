@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1578423834 source:c:\users\aa2\desktop\cp\1-cp\grigore alexandru cristian\explorers\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
