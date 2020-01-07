@@ -5,25 +5,30 @@
 FILE * f;
 FILE * g;
 
-int main()
+char * sentence;
+char **sentences;
+int * freqVect;
+int * freqVect2;
+
+void initialization(int nrOfSentences)
 {
 
-    /// a)
-
-    int nrOfSentences, i, j, k;
-    char letter, cmpLetter;
-    f = fopen("sentences.txt", "rw+");
-    g = fopen("output.txt", "w");
-    fscanf(f, "%d", &nrOfSentences);
-    int * freqVect = (int*)malloc(sizeof(int)*26);
+    int i;
+    freqVect = (int*)malloc(sizeof(int)*26);
+    freqVect2 = (int*)malloc(sizeof(int)*26);
     memset(freqVect, 0, 4*26);
-    char **sentences = (char**)malloc(sizeof(char*)*nrOfSentences);
+    sentences = (char**)malloc(sizeof(char*)*nrOfSentences);
     for(i=0; i<nrOfSentences; i++)
     {
         sentences[i] = (char*)malloc(sizeof(char)*26);
     }
-    char * sentence = (char*)malloc(sizeof(char)*26);
-    fgets(sentence, 150, f);
+    sentence = (char*)malloc(sizeof(char)*26);
+}
+
+void readSentences(int nrOfSentences, char * sentence, int * freqVect)
+{
+    int i,j,k;
+    char cmpLetter, letter;
     for(i=0; i<nrOfSentences; i++)
     {
         fgets(sentence, 150, f);
@@ -47,67 +52,75 @@ int main()
             j++;
         }
     }
+}
+void printSentences(int * freqVect)
+{
+    int i;
+    char letter;
     for(i=0; i<26; i++)
     {
         letter=97+i;
         fprintf(g, "%c=%d\n", letter, freqVect[i]);
     }
     fprintf(g, "\n");
+}
 
-    /// b)
-
-    int m,comp, aux;
-    char letter1,letter2;
-    printf("m = ");
-    scanf("%d",&m);
+void compareSentences(int nrOfSentences, int *freqVect, int *freqVect2, char **sentences, int m)
+{
+    int comp,i , j, k;
     for(i=0; i<nrOfSentences; i++)
     {
         memset(freqVect, 0, 4*26);
+        memset(freqVect2, 0, 4*26);
         comp=0;
         if(i!=m)
         {
-            for(j=0; sentences[i][j]!='\0' && sentences[m][j]!='\0'; j++)
+            for(j=0; sentences[i][j]!='\0'; j++)
             {
-                for(k=0; k<26; k++)
+                freqVect[sentences[i][j]-97]++;
+            }
+            for(j=0; sentences[m][j]!='\0'; j++)
+            {
+                freqVect2[sentences[m][j]-97]++;
+            }
+            for(k=0; k<26; k++)
+            {
+                if(freqVect[k]==freqVect2[k] && freqVect[k]!=0)
                 {
-                    letter1=sentences[i][j]-97;
-                    letter2=sentences[m][j]-97;
-                    if(letter1==k)
-                    {
-                        freqVect[k]++;
-                    }
-                    if(letter2==k)
-                    {
-                        freqVect[k]++;
-                    }
+                    comp++;
                 }
-                for(k=0; k<26; k++)
+                else
                 {
-                    aux = freqVect[k]/2*2;
-                    if(aux==freqVect[k] && freqVect[k]!=0)
-                    {
-                        comp++;
-                    }
-                    else
+                    if(freqVect[k]!=0 || freqVect2[k]!=0)
                     {
                         comp--;
                     }
                 }
             }
-            if(sentences[i][j]=='\0')
-            {
-                comp = comp-(strlen(sentences[m])-strlen(sentences[i]));
-            }
-            else
-            {
-                if(sentences[m][j]=='\0')
-                {
-                    comp = comp-(strlen(sentences[i])-strlen(sentences[m]));
-                }
-            }
             fprintf(g, "%d vs. %d = %d\n", i, m, comp );
         }
     }
+}
 
+int main()
+{
+
+    /// a)
+
+    int nrOfSentences;
+    f = fopen("sentences.txt", "rw+");
+    g = fopen("output.txt", "w");
+    fscanf(f, "%d", &nrOfSentences);
+    initialization(nrOfSentences);
+    fgets(sentence, 150, f);
+    readSentences(nrOfSentences, sentence, freqVect);
+    printSentences(freqVect);
+
+    /// b)
+
+    int m;
+    printf("m = ");
+    scanf("%d",&m);
+    compareSentences(nrOfSentences, freqVect, freqVect2, sentences, m);
     return 0;
 }
