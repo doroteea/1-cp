@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1578426200 source:d:\documents\facultate\computer programming\probleme laborator\1-cp\scutea emilia\holygrail\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
