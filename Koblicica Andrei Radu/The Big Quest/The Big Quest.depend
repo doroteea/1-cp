@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1578488051 source:c:\users\andrei\desktop\info\codeblocks\the big quest\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
