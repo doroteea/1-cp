@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/mxligr/Desktop/UNI/AN I/CP/LAB/repo/1-cp/Grama Malina Bianca/proiect 2/main.c
+/Users/mxligr/Desktop/UNI/AN I/CP/problema colocviu - Malina Grama/main.c
 stdio.h
+-
+stdlib.h
+-
+string.h
 -
 
