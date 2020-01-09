@@ -1,4 +1,4 @@
-# Install script for directory: /Users/mxligr/Desktop/UNI/AN I/CP/problema colocviu - Malina Grama
+# Install script for directory: /Users/mxligr/Desktop/UNI/AN I/CP/LAB/repo/1-cp/Grama Malina Bianca/4.warcraft
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/mxligr/Desktop/UNI/AN I/CP/problema colocviu - Malina Grama/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/mxligr/Desktop/UNI/AN I/CP/LAB/repo/1-cp/Grama Malina Bianca/4.warcraft/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

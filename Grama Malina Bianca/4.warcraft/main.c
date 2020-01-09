@@ -34,6 +34,44 @@ void initializeQuests(quests *ques) {
     ques->requiredClasses = (char *) malloc(sizeof(char) * 30);
 }
 
+int readHeroes (FILE *f, heroes *her)
+{
+    int nrOfHeroes = 0;
+    char *strbuf = (char *) malloc(sizeof(char) * 200);
+    while (fgets(strbuf, 200, f) != NULL) {
+        char *pch;
+        pch = strtok(strbuf, ",");
+        strcpy(her[nrOfHeroes].name, pch);
+        pch = strtok(NULL, ",");
+        her[nrOfHeroes].class = *pch;
+        pch = strtok(NULL, ",");
+        her[nrOfHeroes].power = atoi(pch);
+        nrOfHeroes++;
+    }
+
+    return nrOfHeroes;
+}
+
+int readQuests(FILE *q, quests *ques)
+{
+    int qNum = 0;
+    char *buffer = (char *) malloc(sizeof(char) * 200);
+    while (fgets(buffer, 200, q) != NULL) {
+        char *pointer;
+        pointer = strtok(buffer, ",");
+        strcpy(ques[qNum].title, pointer);
+        pointer = strtok(NULL, ",");
+        strcpy(ques[qNum].requiredClasses, pointer);
+        pointer = strtok(NULL, ",");
+        ques[qNum].requiredTotalPower = atoi(pointer);
+        pointer = strtok(NULL, ",");
+        ques[qNum].experienceGained = atoi(pointer);
+        qNum++;
+    }
+
+    return qNum;
+}
+
 void printHeroes(heroes her) {
     printf("%s,%c,%d\n", her.name, her.class, her.power);
 }
@@ -42,19 +80,43 @@ void printQuests(quests ques) {
     printf("%s,%s,%d,%d\n", ques.title, ques.requiredClasses, ques.requiredTotalPower, ques.experienceGained);
 }
 
-void sortHeroes(heroes *her, int nrOfHeroes) {
-    int damagers = 0, healers = 0, tanks = 0;
+int totalNrOfDamagers(heroes *her, int nrOfHeroes)
+{
+    int damagers=0;
     for (int i = 0; i < nrOfHeroes; i++) {
         if (her[i].class == 'D') {
             damagers++;
         }
+    }
+    return damagers;
+}
+
+int totalNrOfHealers(heroes *her, int nrOfHeroes)
+{
+    int healers=0;
+    for (int i = 0; i < nrOfHeroes; i++) {
         if (her[i].class == 'H') {
             healers++;
         }
+    }
+    return healers;
+}
+
+int totalNrOfTanks(heroes *her, int nrOfHeroes)
+{
+    int tanks=0;
+    for (int i = 0; i < nrOfHeroes; i++) {
         if (her[i].class == 'T') {
             tanks++;
         }
     }
+    return tanks;
+}
+
+void sortHeroes(heroes *her, int nrOfHeroes) {
+    int damagers = totalNrOfDamagers(her,nrOfHeroes);
+    int healers = totalNrOfHealers(her,nrOfHeroes);
+    int tanks = totalNrOfTanks(her,nrOfHeroes);
 
     heroes *auxHeroes = (heroes *) malloc(sizeof(heroes) * maxNumberOfHeroes);
     for (int i = 0; i < maxNumberOfHeroes; i++) {
@@ -113,70 +175,11 @@ void howManyClasses(quests ques, nrOfClasses *classes) {
     }
 }
 
-int main() {
-    FILE *f;
-    f = fopen("heroes.txt", "r+");
-
-    heroes *her = (heroes *) malloc(sizeof(heroes) * 20);
-    for (int i = 0; i < 20; i++) {
-        initializeHeroes(&her[i]);
-    }
-
-    quests *ques = (quests *) malloc(sizeof(quests) * 20);
-    for (int i = 0; i < 20; i++) {
-        initializeQuests(&ques[i]);
-    }
-
-    int nrOfHeroes = 0;
-    char *strbuf = (char *) malloc(sizeof(char) * 200);
-    while (fgets(strbuf, 200, f) != NULL) {
-        char *pch;
-        pch = strtok(strbuf, ",");
-        strcpy(her[nrOfHeroes].name, pch);
-        pch = strtok(NULL, ",");
-        her[nrOfHeroes].class = *pch;
-        pch = strtok(NULL, ",");
-        her[nrOfHeroes].power = atoi(pch);
-        nrOfHeroes++;
-    }
-
-    FILE *q;
-    q = fopen("quests.txt", "r");
-    int qNum = 0;
-    char *buffer = (char *) malloc(sizeof(char) * 200);
-    while (fgets(buffer, 200, q) != NULL) {
-        char *pointer;
-        pointer = strtok(buffer, ",");
-        strcpy(ques[qNum].title, pointer);
-        pointer = strtok(NULL, ",");
-        strcpy(ques[qNum].requiredClasses, pointer);
-        pointer = strtok(NULL, ",");
-        ques[qNum].requiredTotalPower = atoi(pointer);
-        pointer = strtok(NULL, ",");
-        ques[qNum].experienceGained = atoi(pointer);
-        qNum++;
-    }
-
-    sortHeroes(her, nrOfHeroes);
-    nrOfClasses *classes = (nrOfClasses *) malloc(sizeof(nrOfClasses) * maxNumberOfQuests);
-    for (int i = 0; i < qNum; i++) {
-        howManyClasses(ques[i], &classes[i]);
-    }
-
-    FILE *output;
-    output = fopen("outcome.txt", "w");
-    int damagers = 0, healers = 0, tanks = 0;
-    for (int i = 0; i < nrOfHeroes; i++) {
-        if (her[i].class == 'D') {
-            damagers++;
-        }
-        if (her[i].class == 'H') {
-            healers++;
-        }
-        if (her[i].class == 'T') {
-            tanks++;
-        }
-    }
+void printOutcome(FILE *output, heroes *her, int nrOfHeroes, quests *ques, int qNum, nrOfClasses *classes)
+{
+    int damagers=totalNrOfDamagers(her,nrOfHeroes);
+    int healers=totalNrOfHealers(her,nrOfHeroes);
+    int tanks=totalNrOfTanks(her,nrOfHeroes);
 
     int experienceGained = 0;
     for (int i = 0; i < qNum; i++) {
@@ -198,7 +201,7 @@ int main() {
                     }
                     experienceGained = experienceGained + ques[i].experienceGained;
                     fprintf(output,"went on to complete \"%s\" - SUCCESS (%d vs %d) and gained %dxp.", ques[i].title,
-                           ques[i].requiredTotalPower, totalPower, ques[i].experienceGained);
+                            ques[i].requiredTotalPower, totalPower, ques[i].experienceGained);
                 } else {
                     fprintf(output,"Cannot execute mission \"%s\" - not enough heroes of type \"T\".", ques[i].title);
                 }
@@ -217,6 +220,38 @@ int main() {
     } else {
         fprintf(output,"The group is now ready to attack Argus :)");
     }
+}
+
+int main() {
+
+    heroes *her = (heroes *) malloc(sizeof(heroes) * 20);
+    for (int i = 0; i < 20; i++) {
+        initializeHeroes(&her[i]);
+    }
+
+    quests *ques = (quests *) malloc(sizeof(quests) * 20);
+    for (int i = 0; i < 20; i++) {
+        initializeQuests(&ques[i]);
+    }
+
+    FILE *f;
+    f = fopen("heroes.txt", "r");
+    int nrOfHeroes=readHeroes(f,her);
+
+    FILE *q;
+    q = fopen("quests.txt", "r");
+    int qNum=readQuests(q,ques);
+
+    sortHeroes(her, nrOfHeroes);
+
+    nrOfClasses *classes = (nrOfClasses *) malloc(sizeof(nrOfClasses) * maxNumberOfQuests);
+    for (int i = 0; i < qNum; i++) {
+        howManyClasses(ques[i], &classes[i]);
+    }
+
+    FILE *output;
+    output = fopen("outcome.txt", "w");
+    printOutcome(output,her,nrOfHeroes,ques,qNum,classes);
 
     fclose(f);
     fclose(q);

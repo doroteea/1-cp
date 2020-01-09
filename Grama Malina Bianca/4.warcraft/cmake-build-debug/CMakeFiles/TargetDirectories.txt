@@ -1,3 +1,3 @@
-/Users/mxligr/Desktop/UNI/AN I/CP/problema colocviu - Malina Grama/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/mxligr/Desktop/UNI/AN I/CP/problema colocviu - Malina Grama/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/mxligr/Desktop/UNI/AN I/CP/problema colocviu - Malina Grama/cmake-build-debug/CMakeFiles/problema_colocviu.dir
+/Users/mxligr/Desktop/UNI/AN I/CP/LAB/repo/1-cp/Grama Malina Bianca/4.warcraft/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/mxligr/Desktop/UNI/AN I/CP/LAB/repo/1-cp/Grama Malina Bianca/4.warcraft/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/mxligr/Desktop/UNI/AN I/CP/LAB/repo/1-cp/Grama Malina Bianca/4.warcraft/cmake-build-debug/CMakeFiles/problema_colocviu.dir

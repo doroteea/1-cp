@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/mxligr/Desktop/UNI/AN I/CP/problema colocviu - Malina Grama/main.c" "/Users/mxligr/Desktop/UNI/AN I/CP/problema colocviu - Malina Grama/cmake-build-debug/CMakeFiles/problema_colocviu.dir/main.c.o"
+  "/Users/mxligr/Desktop/UNI/AN I/CP/LAB/repo/1-cp/Grama Malina Bianca/4.warcraft/main.c" "/Users/mxligr/Desktop/UNI/AN I/CP/LAB/repo/1-cp/Grama Malina Bianca/4.warcraft/cmake-build-debug/CMakeFiles/problema_colocviu.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
