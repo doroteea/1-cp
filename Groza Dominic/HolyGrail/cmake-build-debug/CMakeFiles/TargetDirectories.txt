@@ -1,0 +1,3 @@
+C:/Users/Dominic/Desktop/Stuff/CP/CP Lab/Git/1-cp/Groza Dominic/HolyGrail/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Dominic/Desktop/Stuff/CP/CP Lab/Git/1-cp/Groza Dominic/HolyGrail/cmake-build-debug/CMakeFiles/HolyGrail.dir
+C:/Users/Dominic/Desktop/Stuff/CP/CP Lab/Git/1-cp/Groza Dominic/HolyGrail/cmake-build-debug/CMakeFiles/rebuild_cache.dir

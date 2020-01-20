@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1573061364 source:d:\info\c facultate\1-cp\stoica tudor\3.10 strings\main.c
+	<stdio.h>
+	<string.h>
+	<stdbool.h>
+

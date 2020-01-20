@@ -1,0 +1,30 @@
+The original text is:
+llllllllbddddaaaaaaadddddccccfg
+
+ddddddasdsddddddd
+
+wwwwwwwass
+
+gggtrrreettyyy
+
+
+The compressed text is:
+#l8b#d4#a7#d5#c4fg
+
+#d6asds#d7
+
+#w7ass
+
+#g3t#r3eett#y3
+
+
+The decompressed text is:
+llllllllbddddaaaaaaadddddccccfg
+
+ddddddasdsddddddd
+
+wwwwwwwass
+
+gggtrrreettyyy
+
+

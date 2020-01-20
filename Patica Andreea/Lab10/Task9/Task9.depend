@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1574548327 source:c:\users\alex\desktop\programming lab\1-cp\patica andreea\lab10\task9\task9.c
+	"task9.h"
+
+1574548327 c:\users\alex\desktop\programming lab\1-cp\patica andreea\lab10\task9\task9.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1574548328 source:c:\users\alex\desktop\programming lab\1-cp\patica andreea\lab10\task9\main.c
+	"task9.h"
+

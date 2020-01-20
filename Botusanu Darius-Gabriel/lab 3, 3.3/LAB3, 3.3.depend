@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1570656627 source:c:\users\darius\desktop\cp lab\1-cp\botusanu darius-gabriel\lab3, 3.3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1573998393 source:c:\users\darius\desktop\1-cp\botusanu darius-gabriel\lab 3, 3.3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1573999562 source:c:\users\darius\desktop\1-cp\botusanu darius-gabriel\lab 3, 3.3\functions.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1573999669 source:c:\users\darius\desktop\1-cp\botusanu darius-gabriel\lab 3, 3.3\header.c
+

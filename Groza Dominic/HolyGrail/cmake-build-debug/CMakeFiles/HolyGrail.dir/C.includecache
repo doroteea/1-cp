@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Dominic/Desktop/Stuff/CP/CP Lab/Git/1-cp/Groza Dominic/HolyGrail/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1571217425 source:d:\damian\wrwr\main.c
+	<stdio.h>
+	<stdlib.h>
+	<float.h>
+

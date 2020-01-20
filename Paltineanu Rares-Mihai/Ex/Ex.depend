@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1570606178 source:d:\git ex\1-cp\paltineanu rares-mihai\ex\main.c
+	<stdio.h>
+	<stdlib.h>
+

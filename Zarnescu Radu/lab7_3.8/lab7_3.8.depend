@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1572891866 source:c:\users\zradu\desktop\computer programming lab\1-cp\zarnescu radu\lab7_3.8\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -1,0 +1,15 @@
+01.05.2015,Diorica,Vancila,876543215,deposited 700 EUR
+08.10.2008,Pandu,Sop,514237912,withdrew 200 RON
+19.05.2019,Diviu,Lragnea,211411561,had account frozen
+04.12.2000,Contra,Gică,554691246,opened a new account
+01.01.2020,Diviu,Lragnea,211411561,opened a new account 
+09.08.2005,Pandu,Sop,514237912,deposited 50000 EUR
+05.01.2016,Diorica,Vancila,876543215,deposited 9500 EUR
+04.02.2018,Tzanca,Uraganu,504231455,opened a new account
+11.11.2019,Diorica,Vancila,876543215,withdrew 500 EUR
+07.04.2016,Ban,Darna,442151355,attempted to withdraw 600 EUR not enough funds
+07.04.2016,Ban,Darna,442151355,attempted to withdraw 200 EUR not enough funds
+07.04.2016,Ban,Darna,442151355, withdrew 50 EUR
+04.03.2019,Tzanca,Uraganu,504231455,deposited 9950 EUR 
+06.02.2005,Contra,Gică,554691246,depoisted 500 EUR
+06.05.2006,Contra,Gică,554691246,withdrew 400 EUR

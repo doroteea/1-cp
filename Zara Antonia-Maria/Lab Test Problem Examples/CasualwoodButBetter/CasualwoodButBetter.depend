@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1578413234 source:c:\users\zaraa\desktop\cp lab\1-cp\zara antonia-maria\lab test problem examples\casualwoodbutbetter\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"header.h"
+
+1578415245 c:\users\zaraa\desktop\cp lab\1-cp\zara antonia-maria\lab test problem examples\casualwoodbutbetter\header.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1578415241 source:c:\users\zaraa\desktop\cp lab\1-cp\zara antonia-maria\lab test problem examples\casualwoodbutbetter\requirement1.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1578415229 source:c:\users\zaraa\desktop\cp lab\1-cp\zara antonia-maria\lab test problem examples\casualwoodbutbetter\requirement2.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1578415235 source:c:\users\zaraa\desktop\cp lab\1-cp\zara antonia-maria\lab test problem examples\casualwoodbutbetter\requirement3.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1574417101 source:d:\computer programming\1-cp\crisan cristian alexandru\010 3.3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"student.h"
+
+1574416301 d:\computer programming\1-cp\crisan cristian alexandru\010 3.3\student.h
+	<stdio.h>
+	<stdlib.h>
+
+1574416576 source:d:\computer programming\1-cp\crisan cristian alexandru\010 3.3\student.c
+	"student.h"
+

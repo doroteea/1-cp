@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1577029057 source:c:\users\zaraa\desktop\cp lab\1-cp\zara antonia-maria\l10_refacut\3.3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"functions.h"
+
+1577029268 source:c:\users\zaraa\desktop\cp lab\1-cp\zara antonia-maria\l10_refacut\3.3\functions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1577029233 c:\users\zaraa\desktop\cp lab\1-cp\zara antonia-maria\l10_refacut\3.3\functions.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

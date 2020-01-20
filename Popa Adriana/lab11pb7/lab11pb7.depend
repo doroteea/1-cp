@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1575586122 source:c:\users\adriana\desktop\utcn\1-cp\popa adriana\lab11pb7\main.c
+	"complex.h"
+
+1575586521 source:c:\users\adriana\desktop\utcn\1-cp\popa adriana\lab11pb7\complex.c
+	"complex.h"
+
+1575585909 c:\users\adriana\desktop\utcn\1-cp\popa adriana\lab11pb7\complex.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

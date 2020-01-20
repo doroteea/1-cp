@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1578426865 source:d:\git ex\1-cp\paltineanu rares-mihai\tennismatch\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+

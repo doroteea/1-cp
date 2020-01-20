@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1578431554 source:d:\info\c facultate\1-cp\stoica tudor\tennisproblem\main.c
+	"functions.h"
+
+1578431560 d:\info\c facultate\1-cp\stoica tudor\tennisproblem\functions.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

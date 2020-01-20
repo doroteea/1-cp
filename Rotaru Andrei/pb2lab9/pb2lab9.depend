@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1574190883 source:c:\users\acasa\desktop\utcn\computer programming\1-cp\rotaru andrei\pb2lab9\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

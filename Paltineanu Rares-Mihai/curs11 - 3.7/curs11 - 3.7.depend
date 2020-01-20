@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1574971698 source:d:\git ex\1-cp\paltineanu rares-mihai\curs11 - 3.7\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

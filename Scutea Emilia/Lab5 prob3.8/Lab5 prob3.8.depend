@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1577397772 source:d:\documents\facultate\computer programming\probleme laborator\1-cp\scutea emilia\lab5 prob3.8\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

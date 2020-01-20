@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1576012191 source:c:\users\adriana\desktop\utcn\1-cp\popa adriana\lab11pb11\main.c
+	"cars.h"
+
+1576009415 c:\users\adriana\desktop\utcn\1-cp\popa adriana\lab11pb11\cars.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1576012628 source:c:\users\adriana\desktop\utcn\1-cp\popa adriana\lab11pb11\cars.c
+	"cars.h"
+

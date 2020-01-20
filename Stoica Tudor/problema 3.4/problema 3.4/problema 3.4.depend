@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1572003225 source:d:\info\c facultate\1-cp\stoica tudor\problema 3.4\problema 3.4\main.c
+	<stdlib.h>
+	"functii_elementare.h"
+
+1572003387 d:\info\c facultate\1-cp\stoica tudor\problema 3.4\problema 3.4\functii_elementare.h
+	<stdio.h>
+	<stdbool.h>
+
